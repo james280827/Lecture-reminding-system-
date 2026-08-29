@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: #17120f;
+    color: #f5eee8;
+    min-height: 100vh;
+}
+
+
+/* HEADER */
+
+.header {
+    background: #241a15;
+    padding: 25px 20px;
+    border-bottom: 1px solid #4b3428;
+}
+
+
+.header h1 {
+    color: #d6a77a;
+    margin-bottom: 6px;
+}
+
+
+.header p {
+    color: #bca99b;
+}
+
+
+/* MAIN CONTAINER */
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+
+/* DASHBOARD */
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+
+.stat-card {
+    background: #241a15;
+    border: 1px solid #4b3428;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.stat-card span {
+    font-size: 30px;
+}
+
+
+.stat-card h3 {
+    color: #d6a77a;
+    font-size: 25px;
+}
+
+
+.stat-card p {
+    color: #bca99b;
+    font-size: 13px;
+}
+
+
+/* FORM */
+
+.form-card {
+    background: #241a15;
+    border: 1px solid #4b3428;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+
+.form-card h2 {
+    color: #d6a77a;
+    margin-bottom: 20px;
+}
+
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    color: #d8c7ba;
+    font-size: 14px;
+}
+
+
+input,
+textarea {
+    width: 100%;
+    padding: 13px;
+    background: #17120f;
+    color: white;
+    border: 1px solid #5a4030;
+    border-radius: 8px;
+    outline: none;
+}
+
+
+input:focus,
+textarea:focus {
+    border-color: #d6a77a;
+}
+
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+
+/* BUTTON */
+
+.add-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #a66b3f;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.add-btn:hover {
+    background: #c18455;
+}
+
+
+/* LECTURE SECTION */
+
+.lecture-section {
+    margin-bottom: 30px;
+}
+
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+
+.section-title h2 {
+    color: #d6a77a;
+}
+
+
+.refresh-btn {
+    background: #30231c;
+    color: #d6a77a;
+    border: 1px solid #5a4030;
+    padding: 8px 14px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+
+/* LECTURE CARD */
+
+.lecture-card {
+    background: #241a15;
+    border: 1px solid #4b3428;
+    border-left: 5px solid #a66b3f;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+
+.lecture-card h3 {
+    color: #e2b991;
+    margin-bottom: 10px;
+}
+
+
+.lecture-info {
+    display: grid;
+    gap: 7px;
+    color: #c9b8aa;
+    font-size: 14px;
+}
+
+
+.delete-btn {
+    margin-top: 15px;
+    padding: 9px 14px;
+    border: none;
+    border-radius: 7px;
+    background: #713f35;
+    color: white;
+    cursor: pointer;
+}
+
+
+.delete-btn:hover {
+    background: #914d40;
+}
+
+
+.empty-message {
+    background: #241a15;
+    border: 1px solid #4b3428;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    color: #a99688;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #88766a;
+    border-top: 1px solid #35261e;
+    margin-top: 30px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .container {
+        width: 94%;
+    }
+
+  }
