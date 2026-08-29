@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lecture Reminder System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div>
+            <h1>📚 Lecture Reminder</h1>
+            <p>Keep track of your upcoming lectures</p>
+        </div>
+    </header>
+
+
+    <main class="container">
+
+        <!-- Dashboard -->
+
+        <section class="dashboard">
+
+            <div class="stat-card">
+                <span>📚</span>
+                <div>
+                    <h3 id="totalLectures">0</h3>
+                    <p>Total Lectures</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span>📅</span>
+                <div>
+                    <h3 id="todayLectures">0</h3>
+                    <p>Today's Lectures</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span>⏰</span>
+                <div>
+                    <h3 id="upcomingLectures">0</h3>
+                    <p>Upcoming</p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Add Lecture -->
+
+        <section class="form-card">
+
+            <h2>➕ Add New Lecture</h2>
+
+            <form id="lectureForm">
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+
+                    <input
+                        type="text"
+                        id="subject"
+                        placeholder="Enter subject name"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="instructor">Instructor</label>
+
+                    <input
+                        type="text"
+                        id="instructor"
+                        placeholder="Enter instructor name"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="date">Date</label>
+
+                        <input
+                            type="date"
+                            id="date"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="time">Time</label>
+
+                        <input
+                            type="time"
+                            id="time"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+                    <label for="room">Room</label>
+
+                    <input
+                        type="text"
+                        id="room"
+                        placeholder="Example: Room 204"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+
+                    <textarea
+                        id="description"
+                        placeholder="Enter lecture details..."
+                    ></textarea>
+                </div>
+
+
+                <button type="submit" class="add-btn">
+                    Add Lecture
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Lecture List -->
+
+        <section class="lecture-section">
+
+            <div class="section-title">
+
+                <h2>📅 My Lectures</h2>
+
+                <button
+                    class="refresh-btn"
+                    onclick="loadLectures()"
+                >
+                    🔄 Refresh
+                </button>
+
+            </div>
+
+
+            <div id="lectureList">
+
+                <div class="empty-message">
+                    No lectures added yet.
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+
+    </footer>
+
+
+    <!-- Firebase -->
+
+    <script type="module" src="script.js"></script>
+
+</body>
+  </html>
